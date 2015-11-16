@@ -1,0 +1,22 @@
+{
+  "name": "weasel",
+  "version": "1.0.0",
+  "description": "REST API Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadeeth/weasel.git"
+  },
+  "author": "Nadeeth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nadeeth/weasel/issues"
+  },
+  "homepage": "https://github.com/nadeeth/weasel#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
