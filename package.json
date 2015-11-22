@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/nadeeth/weasel#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "mocha": "^2.3.4",
+    "mongodb": "^2.0.48",
+    "underscore-node": "^0.1.2"
   }
 }
