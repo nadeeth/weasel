@@ -1,33 +1,26 @@
 {
   "name": "weasel",
   "version": "1.0.0",
-  "description": "A REST API Framework",
-  "main": "index.js",
-  "private": true,
+  "main": "server/server.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "pretest": "jshint ."
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "loopback": "^2.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.1.0",
+    "loopback-datasource-juggler": "^2.39.0",
+    "serve-favicon": "^2.0.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nadeeth/weasel.git"
+    "type": "",
+    "url": ""
   },
-  "author": "Nadeeth",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nadeeth/weasel/issues"
-  },
-  "homepage": "https://github.com/nadeeth/weasel#readme",
-  "dependencies": {
-    "body-parser": "~1.13.2",
-    "cookie-parser": "~1.3.5",
-    "debug": "~2.2.0",
-    "express": "~4.13.1",
-    "jade": "~1.11.0",
-    "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0",
-    "mocha": "^2.3.4",
-    "mongodb": "^2.0.48",
-    "underscore-node": "^0.1.2"
-  }
+  "description": "weasel"
 }
