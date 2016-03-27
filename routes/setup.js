@@ -4,7 +4,7 @@ var User   = require('../models/user');
 var router = express.Router();
 
 /* GET create test data. */
-router.get('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
 
     // create a sample user
     var user = new User({
@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
     // save the sample user
     user.save(function(err) {
         if (err) throw err;
-        res.json({ success: true, data: user });
+        res.json({ success: true, user: user });
     });
 });
 

@@ -16,12 +16,12 @@ router.post('/', function(req, res) {
         if (err) throw err;
 
         if (!user) {
-            res.json({ success: false, message: 'Authentication failed. User not found.' });
+            res.json({ success: false, message: 'User not found.' });
         } else if (user) { 
 
             // check if password matches
             if (user.password !== md5(req.body.password)) {
-                res.json({ success: false, message: 'Authentication failed. Wrong password.' });
+                res.json({ success: false, message: 'Wrong password.' });
             } else {
 
                 // if user is found and password is right
