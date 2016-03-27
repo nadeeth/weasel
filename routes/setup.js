@@ -1,4 +1,5 @@
 var express = require('express');
+var md5 = require('md5');
 var User   = require('../models/user');
 var router = express.Router();
 
@@ -9,7 +10,7 @@ router.get('/', function(req, res, next) {
     var user = new User({
         name: 'John Doe',
         email: 'john.doe@gmail.com',
-        password: 'enduro',
+        password: md5('john'),
         date_of_birth: '1983-12-14',
         loc:[ 174.76333150000005,-36.8484597 ]
     });

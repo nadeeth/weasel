@@ -1,4 +1,5 @@
 var express = require('express');
+var md5 = require('md5');
 var User   = require('../models/user'); // get user mongoose model
 var jwt = require('jsonwebtoken'); 
 var config = require('../config');
@@ -19,7 +20,7 @@ router.post('/', function(req, res) {
         } else if (user) { 
 
             // check if password matches
-            if (user.password !== req.body.password) {
+            if (user.password !== md5(req.body.password)) {
                 res.json({ success: false, message: 'Authentication failed. Wrong password.' });
             } else {
 
