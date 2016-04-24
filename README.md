@@ -16,7 +16,7 @@ To run the server in development mode "DEBUG=weasel:* npm run-script devstart" o
 
 There are few example routes (Actions) in the routes directory for user authentication, populate some test data, etc.
 
-And test directory has sample API level test and the test config file. In the test config file you can have different configuration for testing (ex: A separate database for testing etc.). You can run this sample test with this command.
+And the test directory contains a sample API level test and the test config file. In the test config file you can have different configurations for testing (ex: A separate database for testing etc.). You can run this sample test with the command given below.
 
     mocha test/api.test.js
 
