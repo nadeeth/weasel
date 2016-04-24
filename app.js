@@ -13,7 +13,7 @@ var config = require('./config'); // get the config file
 module.exports = function(config) {
 
     //Routes (Controllers)
-    var routes = require('./routes/index');
+    var index = require('./routes/index');
     var user = require('./routes/user');
     var setup = require('./routes/setup');
     var authenticate = require('./routes/authenticate');
@@ -53,6 +53,7 @@ module.exports = function(config) {
 
     app.use('/authenticate', authenticate);
     app.use('/setup', setup);
+    app.use('/', index);
 
     // route middleware to verify a token
     app.use(function(req, res, next) {
@@ -80,7 +81,6 @@ module.exports = function(config) {
         }
     });
 
-    app.use('/', routes);
     app.use('/user', user);
     app.get('/404', function(req, res){
         throw new NotFound;
