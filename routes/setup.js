@@ -12,6 +12,7 @@ router.post('/', function(req, res, next) {
         email: 'john.doe@gmail.com',
         password: md5('john'),
         date_of_birth: '1983-12-14',
+        role: 'admin',
         loc:[ 174.76333150000005,-36.8484597 ]
     });
 

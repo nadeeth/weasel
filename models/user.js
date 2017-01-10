@@ -8,5 +8,6 @@ module.exports = mongoose.model('User', new Schema({
 	email: { index: true, type: String, required: true },
 	password: { type: String, required: true },
 	date_of_birth: Date,
+	role: {type: String, required: true},
 	loc:{ type: [Number], index: '2dsphere' }
 }));
